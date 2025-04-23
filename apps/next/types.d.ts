@@ -12,3 +12,8 @@ declare namespace Intl {
 }
 
 type MaybePromise<T> = T | Promise<T>;
+
+declare module "*.svg" {
+  const content: string;
+  export default content;
+}

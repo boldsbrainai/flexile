@@ -19,6 +19,7 @@ import iconGlobe from "./icon-globe.svg";
 import testimonialKarin from "./testimonial-karin.jpg";
 import testimonialSahil from "./testimonial-sahil.jpg";
 import testimonialSid from "./testimonial-sid.jpg";
+import { SEO } from "@/components/SEO";
 
 const buttonClasses = "flex justify-center items-center rounded-full transition-all duration-400 no-underline";
 
@@ -36,7 +37,7 @@ const BulletPoint = ({ children }: { children: ReactNode }) => (
 );
 
 export default function HomePage() {
-  const equityTabs = [
+  const equityTabs: { label: string; image: StaticImageData }[] = [
     { label: "Connect your cap table", image: equityCapTable },
     { label: "Pick your equity model", image: equityAllocation },
     { label: "Send dividends at scale", image: equityEmail },
@@ -68,6 +69,12 @@ export default function HomePage() {
 
   return (
     <>
+      <SEO
+        title="Energia Solar para GD, GC e Meli - Soluções Renováveis"
+        description="Explore soluções em energia solar para geração distribuída, centralizada e regiões Meli no Brasil. Reduza custos e aumente a eficiência energética."
+        keywords="energia solar, GD, GC, Meli, Brasil, energia renovável"
+        url="https://www.seusite.com.br/marketing"
+      />
       <nav className="fixed top-0 right-0 left-0 z-50 m-0 box-border flex h-20 w-full items-center justify-between bg-black p-0 text-white">
         <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4">
           <Image src={logo} alt="Flexile" className="flex h-8 w-auto shrink-0 border-none invert md:block md:h-10" />
